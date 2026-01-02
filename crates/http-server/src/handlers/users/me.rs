@@ -20,7 +20,9 @@ pub async fn handler(
         .await?
         .ok_or(HttpException::Internal("user not found".into()))?;
 
-    let response = Response { id: user.id };
+    let response = Response {
+        id: user.id.to_string(),
+    };
 
     Ok(Json(response))
 }
