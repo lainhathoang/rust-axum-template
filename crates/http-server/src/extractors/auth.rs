@@ -14,13 +14,14 @@ use axum_extra::{
     TypedHeader,
     headers::{Authorization, authorization::Bearer},
 };
+use database::sea_orm::prelude::Uuid;
 use jsonwebtoken::{DecodingKey, Validation, errors::ErrorKind};
 use serde::{Deserialize, Serialize, de::DeserializeOwned};
 
 #[derive(Deserialize, Serialize, Debug)]
 pub struct Claims {
     pub exp: u32,
-    pub id: i64,
+    pub id: Uuid,
 }
 
 #[allow(dead_code)]

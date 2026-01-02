@@ -3,7 +3,7 @@ datasource db {
 }
 
 model user {
-    id BigInt @id
+    id String @id @default(uuid(7))
 }
 
 model setting {

@@ -9,7 +9,7 @@ use crate::{
 
 #[derive(Serialize)]
 pub struct Response {
-    id: i64,
+    id: String,
 }
 
 pub async fn handler(
