@@ -28,7 +28,7 @@ pub struct Claims {
 #[derive(Deserialize, Serialize, Debug)]
 pub struct Sub {
     pub exp: u32,
-    pub sub: i64,
+    pub sub: Uuid,
 }
 
 pub struct Auth(pub Claims);
